@@ -8,8 +8,9 @@ namespace Theme;
 class PostTypes {
 
 	protected $types = array(
-		'person',
-		'article',
+		'okcupid_profile',
+		'match_profile',
+		'pof_profile',
 	);
 
 	public function __construct(){
@@ -20,46 +21,52 @@ class PostTypes {
 		}
 	}
 
-	/**
-	 * Sample "person" content type - often used as a more full-featured and
-	 * flexible replacement for the standard WordPress author functionality.
-	 */
-	public function person(){
+	public function okcupid_profile(){
 
 		register_via_cpt_core(
 			array(
-				'Person', // Singular Name
-				'People', // Plural Name
-				'person' // Post Type Slug
+				'OKCupid Profile',
+				'OKCupid Profiles',
+				'okcupid-profile'
 			),
 			array(
-				'menu_icon' => 'dashicons-businessman', // Dashicon icon (Reference: https://developer.wordpress.org/resource/dashicons/)
-				'supports' => array('title', 'editor', 'thumbnail', 'excerpt'),
-				'has_archive' => true
+				'supports' => false,
+				'has_archive' => false,
+				'public' => false
 			)
 		);
 
 	}
 
-	/**
-	 * Sample "article" content type - used in place of the default "post" content type
-	 * to allow a custom rewrite base.  This makes it easier to track blog/article traffic
-	 * specifically in analytics software.  However, it also can complicate the development
-	 * process.  Proceed with caution.
-	 */
-	public function article(){
+	public function match_profile(){
 
 		register_via_cpt_core(
 			array(
-				'Article', // Singular Name
-				'Articles', // Plural Name
-				'article' // Post Type Slug
+				'Match.com Profile',
+				'Match.com Profiles',
+				'match-profile'
 			),
 			array(
-				'menu_icon' => 'dashicons-admin-page', // Dashicon icon (Reference: https://developer.wordpress.org/resource/dashicons/)
-				'supports' => array('title', 'editor', 'thumbnail', 'excerpt'),
-				'taxonomies' => array('category', 'post_tag'),
-				'has_archive' => true
+				'supports' => false,
+				'has_archive' => false,
+				'public' => false
+			)
+		);
+
+	}
+
+	public function pof_profile(){
+
+		register_via_cpt_core(
+			array(
+				'Plenty of Fish Profile',
+				'Plenty of Fish Profiles',
+				'pof-profile'
+			),
+			array(
+				'supports' => false,
+				'has_archive' => false,
+				'public' => false
 			)
 		);
 

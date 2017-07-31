@@ -17,8 +17,7 @@ class CustomFields {
 	 * @var array
 	 */
 	protected $boxes = array(
-		'front',
-		'article',
+		'profile'
 	);
 
 	/**
@@ -45,6 +44,34 @@ class CustomFields {
 		}
 	}
 
+	public function profile(){
+
+		$cmb2 = new_cmb2_box(array(
+			'id' => 'profile',
+			'title' => 'Extended information',
+			'object_types' => array('okcupid-profile', 'match-profile', 'pof-profile')
+		));
+
+		$cmb2->add_field(array(
+			'id' => 'profile_text',
+			'name' => '"Don\'t Message Me" portion of profile',
+			'type' => 'textarea',
+			'attributes' => array(
+				'autofocus' => 'autofocus'
+			)
+		));
+
+		$cmb2->add_field(array(
+			'id' => 'profile_url',
+			'name' => 'Profile URL',
+			'type' => 'text_url',
+			'attributes' => array(
+				'required' => 'required'
+			)
+		));
+
+	}
+
 	public function front(){
 
 		$cmb2 = new_cmb2_box( array(
@@ -65,20 +92,6 @@ class CustomFields {
 		) );
 
 		$this->subtitle_field($cmb2);
-
-	}
-
-	public function article(){
-
-		$cmb2 = new_cmb2_box( array(
-			'id'           => 'article_details',
-			'title'        => 'Article Details',
-			'object_types' => array( 'article', ),
-		) );
-
-		$this->subtitle_field($cmb2);
-
-		$this->featured_video_url_field($cmb2);
 
 	}
 
