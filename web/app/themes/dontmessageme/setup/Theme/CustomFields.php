@@ -17,7 +17,8 @@ class CustomFields {
 	 * @var array
 	 */
 	protected $boxes = array(
-		'profile'
+		'profile',
+		'profile_read_only'
 	);
 
 	/**
@@ -69,6 +70,39 @@ class CustomFields {
 				'required' => 'required'
 			)
 		));
+
+	}
+
+	public function profile_read_only(){
+
+		$cmb2 = new_cmb2_box(array(
+			'id' => 'profile_read_only',
+			'title' => 'Read Only - these are extracted from the profile markup',
+			'object_types' => array('okcupid-profile', 'match-profile', 'pof-profile')
+		));
+
+		$fields = array(
+			'profile_name',
+			'profile_age',
+			'profile_gender',
+			'profile_orientation',
+			'profile_location',
+		);
+
+		foreach ($fields as $field){
+
+			$cmb2->add_field(array(
+				'id' => $field,
+				'name' => $field,
+				'type' => 'text',
+				'save_field' => false,
+				'attributes' => array(
+					'readonly' => 'readonly',
+					'disabled' => 'disabled'
+				)
+			));
+
+		}
 
 	}
 
