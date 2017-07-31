@@ -40,7 +40,8 @@
     "oscarotero/env": "^1.0",
     "roots/wp-password-bcrypt": "1.0.0",
     "timber/timber": "^1.3",
-    "webdevstudios/cpt-core": "^1.0"
+    "webdevstudios/cpt-core": "^1.0",
+    "webdevstudios/taxonomy_core": "^0.2.4"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^2.5.1"
