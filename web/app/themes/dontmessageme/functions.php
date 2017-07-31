@@ -19,7 +19,6 @@ if ( ! class_exists( 'Timber' ) ) {
 
 Timber::$dirname = array('templates', 'views');
 
-
 ////////////////////////////
 // Initiate Theme Classes //
 ////////////////////////////
@@ -38,6 +37,7 @@ new Theme\Timber\Context();
 new Theme\Hooks\Feeds();
 new Theme\Hooks\Archives();
 new Theme\Hooks\Ajax();
+new Theme\Hooks\ThemeActivation();
 new Theme\Hooks\YoutubeFeaturedImage();
 
 ///////////////////////
