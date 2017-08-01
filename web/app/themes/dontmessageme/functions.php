@@ -39,6 +39,7 @@ new Theme\Hooks\Archives();
 new Theme\Hooks\Ajax();
 new Theme\Hooks\ThemeActivation();
 new Theme\Hooks\YoutubeFeaturedImage();
+new Theme\Hooks\Admin();
 
 ///////////////////////
 // Custom Login Logo //
