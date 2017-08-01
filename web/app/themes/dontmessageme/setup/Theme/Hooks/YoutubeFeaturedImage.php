@@ -17,12 +17,12 @@ class YoutubeFeaturedImage {
 
 	public function set_featured_image($meta_id, $post_id, $meta_key, $meta_value){
 
-		if (!class_exists('bermanco\YouTubeVideo\YouTubeVideo') || !class_exists('bermanco\WordpressImageDownload\WordpressImageDownload')){
-			error_log('Did you forget to run Composer?');
-			return false;
-		}
-
 		if ($meta_key == 'featured_video_url' && $meta_value && !has_post_thumbnail($post_id)){
+
+			if (!class_exists('bermanco\YouTubeVideo\YouTubeVideo') || !class_exists('bermanco\WordpressImageDownload\WordpressImageDownload')){
+				error_log('Did you forget to run Composer?');
+				return false;
+			}
 
 			$api_key = getenv('YOUTUBE_API_KEY');
 
