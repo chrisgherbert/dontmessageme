@@ -96,6 +96,7 @@ class CustomFields {
 				'name' => $field,
 				'type' => 'text',
 				'save_field' => false,
+				'column' => true,
 				'attributes' => array(
 					'readonly' => 'readonly',
 					'disabled' => 'disabled'
