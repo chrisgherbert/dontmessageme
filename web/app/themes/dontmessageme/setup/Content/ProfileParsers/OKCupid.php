@@ -69,7 +69,7 @@ class OKCupid extends BaseParser {
 			$parts[] = ' ' . $this->get_country();
 		}
 
-		return implode('', $parts);
+		return trim(implode('', $parts));
 
 	}
 
