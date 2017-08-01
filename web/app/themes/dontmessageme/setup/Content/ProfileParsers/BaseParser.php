@@ -16,11 +16,13 @@ abstract class BaseParser {
 
 	abstract public function get_name();
 
-	// abstract public function get_location();
+	abstract public function get_location();
+
+	abstract public function get_gender();
+
+	abstract public function get_orientation();
 
 	// abstract public function get_photo_url();
-
-	// abstract public function get_gender();
 
 	/////////////
 	// Factory //

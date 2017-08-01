@@ -10,8 +10,9 @@ class Config {
 
 	public static function post_type_classes(){
 		return array(
-			'post'      => '\Content\Post',
-			'article'   => '\Content\Article',
+			'post' => '\Content\Post',
+			'article' => '\Content\Article',
+			'okcupid-profile' => 'Content\OkcupidProfile'
 		);
 	}
 

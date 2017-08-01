@@ -22,22 +22,27 @@ class OkcupidProfile extends Post {
 		$location = $parser->get_location();
 
 		if ($name){
+			error_log('Setting ' . $name);
 			$this->update('profile_name', $name);
 		}
 
 		if ($age){
+			error_log('Setting ' . $age);
 			$this->update('profile_age', $age);
 		}
 
 		if ($gender){
+			error_log('Setting ' . $gender);
 			$this->update('profile_gender', $gender);
 		}
 
 		if ($orientation){
+			error_log('Setting ' . $orientation);
 			$this->update('profile_orientation', $orientation);
 		}
 
 		if ($location){
+			error_log('Setting ' . $location);
 			$this->update('profile_location', $location);
 		}
 

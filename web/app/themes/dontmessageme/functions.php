@@ -39,6 +39,7 @@ new Theme\Hooks\Archives();
 new Theme\Hooks\Ajax();
 new Theme\Hooks\ThemeActivation();
 new Theme\Hooks\YoutubeFeaturedImage();
+new Theme\Hooks\ContentCreation();
 new Theme\Hooks\Admin();
 
 ///////////////////////
@@ -80,3 +81,4 @@ remove_action('wp_head', 'parent_post_rel_link', 10, 0);
 remove_action('wp_head', 'adjacent_posts_rel_link', 10, 0);
 remove_action('wp_head', 'print_emoji_detection_script', 7);
 remove_action('wp_print_styles', 'print_emoji_styles');
+
