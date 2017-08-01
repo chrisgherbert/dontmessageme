@@ -30,6 +30,10 @@
     {
       "type": "composer",
       "url": "https://wpackagist.org"
+    },
+    {
+      "type": "git",
+      "url": "https://github.com/bermanco/extended-timber-classes.git"
     }
   ],
   "require": {
@@ -45,7 +49,8 @@
     "webdevstudios/cmb2": "^2.2",
     "rogerlos/cmb2-metatabs-options": "^1.3",
     "curl/curl": "^1.7",
-    "paquettg/php-html-parser": "^1.7"
+    "paquettg/php-html-parser": "^1.7",
+    "bermanco/bac-timber-classes": "^1.2"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^2.5.1"
